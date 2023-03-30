@@ -319,3 +319,66 @@ select {
   font-size: 1.5rem;
   color: #fff;
 }
+
+.questions {
+  color: #fff;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.questions__header {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.faq__question {
+  color: #444;
+  cursor: pointer;
+  padding: 30px 20px;
+  width: 60%;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin: auto;
+}
+
+.question {
+  border: 1px solid white;
+  width: 60rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.faq__answer {
+  margin: auto;
+  width: 50%;
+  padding: auto;
+}
+
+.active,
+.faq__question:hover {
+  background-color: #444;
+  color: black;
+}
+
+.faq__answer {
+  padding: 0 18px;
+  background-color: #fff;
+  display: none;
+  overflow: hidden;
+}
+
+.faq__question::after {
+  content: "\02795";
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active::after {
+  content: "\2796";
+}
