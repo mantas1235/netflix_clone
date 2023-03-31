@@ -237,7 +237,7 @@ select {
   align-items: center;
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 50rem;
   background-color: black;
   color: #fff;
 }
@@ -320,65 +320,137 @@ select {
   color: #fff;
 }
 
-.questions {
+.questions__question {
   color: #fff;
-  background-color: black;
+  font-size: 3rem;
+  margin: 4rem auto;
+}
+
+.faq-heading {
+  position: relative;
+  top: -10rem;
+  border-bottom: #777;
+}
+.faq-container {
+  height: 75rem;
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  background-color: black;
 }
 
-.questions__header {
-  font-size: 3rem;
-  text-align: center;
+.faq-one-line {
+  border: 1px solid #444;
+  background-color: rgba(45, 45, 45, 1);
+  width: 70rem;
+  margin-top: 1rem;
 }
 
-.faq__question {
-  color: #444;
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+  /* background-color: #eee; */
+  color: #fff;
   cursor: pointer;
   padding: 30px 20px;
-  width: 60%;
+  width: 100%;
   border: none;
   outline: none;
   transition: 0.4s;
   margin: auto;
 }
-
-.question {
-  border: 1px solid white;
-  width: 60rem;
-  margin-bottom: 2rem;
-  margin-top: 1rem;
-}
-
-.faq__answer {
+.faq-body {
   margin: auto;
-  width: 50%;
+  /* text-align: center; */
+  width: 100%;
   padding: auto;
 }
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 
-.active,
-.faq__question:hover {
-  background-color: #444;
-  color: black;
+.faq-page:hover {
+  background-color: rgb(84, 83, 83);
 }
-
-.faq__answer {
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+  font-family: cursive;
   padding: 0 18px;
-  background-color: #fff;
+  background-color: rgba(45, 45, 45, 1);
   display: none;
   overflow: hidden;
+  font-size: 1.5rem;
+  color: #fff;
 }
-
-.faq__question::after {
+.faq-page:after {
   content: "\02795";
-  font-size: 13px;
+  /* Unicode character for "plus" sign (+) */
   color: #777;
   float: right;
   margin-left: 5px;
 }
+.active:after {
+  content: "\2716";
+  font-size: 2rem;
+  color: #777;
+  float: right;
+  /* Unicode character for "minus" sign (-) */
+}
 
-.active::after {
-  content: "\2796";
+.bottom__get-started {
+  position: relative;
+  top: 3rem;
+}
+
+footer {
+  background-color: black;
+  height: 50vh;
+}
+
+.footer__header {
+  font-size: 16px;
+  position: relative;
+  top: 70px;
+  right: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.footer__header a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__list-container {
+  margin-top: 6rem;
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 70px;
+  grid-row-gap: 10px;
+}
+
+.footer__link {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+}
+
+.last_select {
+  position: relative;
+  top: 4rem;
+  left: 18rem;
+}
+
+.last__paragraph {
+  position: relative;
+  top: 7rem;
+  left: 10rem;
+  color: rgba(255, 255, 255, 0.7);
 }
